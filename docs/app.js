@@ -21,7 +21,7 @@ function detail(a) { return `<h3>O que separar</h3><p>${a.materials}</p><h3>Como
 $('#activities').addEventListener('click',e=>{const button=e.target.closest('[data-activity]');if(!button)return;selectedActivity=activities[Number(button.dataset.activity)];$('#activity-title').textContent=selectedActivity.title;$('#activity-kind').textContent=selectedActivity.kind+' · brincadeira fora da tela';$('#activity-detail').innerHTML=detail(selectedActivity);$('#activity-dialog').showModal();});
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});renderActivities(b.dataset.filter);}));
 $('#close-activity').onclick=()=>$('#activity-dialog').close();
-function stopAudio(){if('speechSynthesis' in window)window.speechSynthesis.cancel();}
+function stopAudio(){if(window.MariahVoice)window.MariahVoice.stop();else if('speechSynthesis' in window)window.speechSynthesis.cancel();}
 function away(text){stopAudio();$('#activity-dialog').close();$('#away-text').textContent=text||'Escolha um objeto seguro, sente perto e converse com a Mariah. Sua presença é a parte principal.';$('#away-dialog').showModal();}
 $('#quiet').onclick=()=>away();
 $('#start-activity').onclick=()=>away(selectedActivity.title+'. '+selectedActivity.steps[0]+' '+selectedActivity.care);
@@ -38,13 +38,9 @@ $('#keys').onclick=e=>{const b=e.target.closest('[data-key]');if(b)selectCard(Nu
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{stopAudio();currentTab=b.dataset.tab;document.querySelectorAll('[data-tab]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});renderKeys();});
 let speechTimer;
 function speak(text=currentCard.say,statusSelector='#speech-status'){
- const status=$(statusSelector);
- if(!('speechSynthesis' in window)||!('SpeechSynthesisUtterance' in window)){status.textContent='Este navegador não oferece voz. Leia o exemplo em voz alta para a Mariah.';return;}
- stopAudio();clearTimeout(speechTimer);
- try{const u=new SpeechSynthesisUtterance(text);u.lang='pt-BR';u.rate=.8;u.volume=.35;const v=window.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase()==='pt-br');if(v)u.voice=v;
- u.onstart=()=>{clearTimeout(speechTimer);status.textContent='Ouvindo um exemplo curto. Use volume baixo e mantenha o aparelho longe do bebê.';};u.onend=()=>{status.textContent='Agora é a sua vez: repita com a sua voz e guarde o aparelho.';};u.onerror=()=>{clearTimeout(speechTimer);status.textContent='A voz não ficou disponível. Você pode ler o cartão em voz alta.';};window.speechSynthesis.speak(u);speechTimer=setTimeout(()=>{status.textContent='Se não ouviu nada, leia o cartão em voz alta. A disponibilidade da voz depende do navegador.';},5000);
- }catch{status.textContent='Áudio indisponível neste navegador. A sua voz é suficiente.';}
+ window.MariahVoice.speak(text,$(statusSelector));
 }
+
 $('#speak').onclick=()=>speak();
 $('#sound').onchange=()=>{if(!$('#sound').checked)stopAudio();};
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAudio();});

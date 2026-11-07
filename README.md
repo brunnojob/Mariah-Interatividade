@@ -86,3 +86,9 @@ Ilustrações e animações originais do projeto, sem reproduzir personagens ou 
 O Pages não exibe links para o repositório ou perfil. Fundo claro suave, cores dessaturadas, texto com contraste e controles adaptados a toque, celular e tablet. Não há alegação de proteção ocular. As seis cantigas têm letras e melodias originais; o áudio é instrumental gerado por Web Audio, sem faixas comerciais ou reprodução contínua.
 
 O calendário pode ser usado manualmente ou com aniversário opcional, que não é salvo ou transmitido. Apenas as marcações voluntárias de brincadeiras ficam no localStorage do navegador, sem pontuação, sequência diária ou diagnóstico. As 31 propostas são alternadas entre os meses e adaptadas à fase; repetir é esperado, sem promessa de evolução em calendário.
+
+### Voz das falas
+
+Seleção automática prioriza vozes conhecidas como femininas e opções naturais em português, com preferência brasileira. A lista acompanha `voiceschanged`; não seleciona a primeira voz sem avaliar o idioma. Ritmo inicial 0,96, tom original e volume ajustável. A família pode ouvir uma amostra e escolher outra voz disponível. Preferências ficam apenas no navegador.
+
+A qualidade e a disponibilidade dependem das vozes do aparelho; não há promessa de voz humana nem de voz neural em todos os navegadores. O módulo não chama endpoints externos de TTS. A própria voz do sistema pode depender de serviços do fabricante. O controle aplica-se às falas; o piano e as cantigas continuam instrumentais.
