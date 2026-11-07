@@ -10,7 +10,7 @@
 
 </div>
 
-Criado com afeto para a Mariah, aos 6 meses, este espaço ajuda **pais e cuidadores** a preparar brincadeiras sensoriais, motoras e de vínculo para bebês de **6 a 12 meses**. A interação principal acontece com pessoas e objetos reais. O site é uma ferramenta para o adulto.
+Criado com afeto para a Mariah, aos 6 meses, este espaço ajuda **pais e cuidadores** a preparar brincadeiras sensoriais, motoras e de vínculo para bebês de **6 a 12 meses**. A interação principal acontece com pessoas e objetos reais. O site é uma ferramenta para o adulto, com uma área de experiências interativas mediadas. Essas experiências não representam recomendação de tempo de tela para bebês.
 
 <img src="docs/assets/brincar.gif" alt="Escolha uma brincadeira, imprima ou prepare os objetos e guarde o aparelho para brincar." width="100%">
 
@@ -18,11 +18,13 @@ Criado com afeto para a Mariah, aos 6 meses, este espaço ajuda **pais e cuidado
 
 | Espaço | O que o cuidador pode fazer |
 | --- | --- |
-| Brincar juntos | Escolher 11 atividades com materiais, passos, cuidados e sinais de pausa. |
+| Brincar juntos | Escolher 32 atividades por mês, dos 6 aos 12 meses, com materiais, passos, cuidados e sinais de pausa. |
 | Números 1–10 | Preparar cartões visuais, ouvir nomes em português e imprimir para colorir. |
 | Alfabeto A–Z | Nomear letras e palavras, ouvir um exemplo e imprimir cartões ou a folha completa. |
 | Formas e cores | Explorar círculo, quadrado, triângulo, retângulo e seis cores com exemplos do mundo real. |
 | Ateliê de papel | Imprimir 20 desenhos vetoriais originais, um por folha A4, ou baixar SVGs individualmente. |
+| Explorar aqui | Bichinhos ilustrados, piano de cores, cucu, história de três páginas e pintura por toque com impressão. |
+| Trilha mensal | Selecionar cada mesversário de 6 a 12 meses e imprimir as propostas daquele mês. |
 | Fora da tela | Interromper o áudio, exibir a orientação escolhida e convidar o adulto a guardar o aparelho. |
 
 <details>
@@ -31,6 +33,8 @@ Criado com afeto para a Mariah, aos 6 meses, este espaço ajuda **pais e cuidado
 - **Sensorial:** cesto dos tesouros; cucu; bolhas de sabão; exploração de texturas na refeição, conforme orientação profissional.
 - **Movimento:** brinquedos próximos na diagonal com apoio; bateria de potes; tummy time supervisionado; passagem de mão em mão.
 - **Linguagem e vínculo:** leitura com entonação; dança suave no colo; imitação e conversa de ida e volta.
+
+Além das 11 propostas iniciais, há **21 novas brincadeiras**, três para cada mês. São 32 ao todo. A idade organiza as sugestões e não funciona como prazo, diagnóstico ou pré-requisito. Todos os meses ficam acessíveis, sem pontuação ou bloqueio.
 
 Cada proposta pode ser impressa separadamente. O guia completo inclui todas as atividades.
 
@@ -53,7 +57,9 @@ Sol, lua, estrela, nuvem, arco-íris, flor, árvore, maçã, pera, banana, bola,
 - Adulto atento durante toda a brincadeira. Objetos grandes, íntegros e adequados à idade, sem cordões ou peças pequenas. Tummy time só acordada e supervisionada; para dormir, de barriga para cima.
 - A exploração alimentar depende de prontidão e orientação individual. “Pedaços grandes” por si só não garantem segurança contra engasgo.
 
-Sem vídeos, reprodução automática, placar, recompensas, rolagem infinita, cadastro ou coleta de dados da criança. Os GIFs ficam no README; a plataforma mantém os elementos parados e respeita a preferência por movimento reduzido. Não há promessa de aceleração cognitiva nem substituição do acompanhamento pediátrico.
+Sem vídeos, reprodução automática, placar, recompensas, rolagem infinita, cadastro ou coleta de dados da criança. Os GIFs ficam no README; as experiências visuais só mudam após ação do adulto e respeitam a preferência por movimento reduzido. Há 22 ilustrações coloridas originais, além dos 20 desenhos de contorno. O piano usa Web Audio com notas curtas geradas no dispositivo; as falas dos bichinhos são onomatopeias narradas por voz sintética, não gravações de animais. Os sons começam desligados. Não há promessa de aceleração cognitiva nem substituição do acompanhamento pediátrico.
+
+A progressão das propostas usa interações descritas pelo [CDC aos 9 meses](https://www.cdc.gov/act-early/milestones/9-months.html) e [aos 12 meses](https://www.cdc.gov/act-early/milestones/1-year.html) como referências gerais. As divisões nos meses intermediários são organização editorial, não marcos clínicos mensais.
 
 **Referências:** [OMS · telas e brincadeiras](https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more), [CDC · interações aos 6 meses](https://www.cdc.gov/act-early/milestones/6-months.html), [NHS · ideias de brincadeiras e segurança](https://www.nhs.uk/baby/babys-development/play-and-learning/baby-and-toddler-play-ideas/).
 

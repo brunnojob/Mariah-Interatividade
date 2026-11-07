@@ -5,9 +5,18 @@ let currentTab = 'numbers';
 let currentIndex = 0;
 let currentCard;
 const shapeSvg = (body,outline=false) => `<svg class="shape-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="${outline?'white':'#0e7d7a'}" stroke="${outline?'black':'#0e7d7a'}" stroke-width="3" stroke-linejoin="round">${body}</g></svg>`;
-function renderActivities(filter='Todas') {
- $('#activities').innerHTML = activities.map((a,i) => ({...a,i})).filter(a=>filter==='Todas'||a.kind===filter).map(a=>`<button class="activity-card" data-activity="${a.i}"><span class="card-icon" aria-hidden="true">${a.icon}</span><span class="tag">${a.kind} · com um adulto</span><h3>${a.title}</h3><p>${a.intro}</p><span class="card-bottom">Preparar a brincadeira ↗</span></button>`).join('');
+let activityFilter = 'Todas';
+function renderActivities(filter=activityFilter) {
+ activityFilter=filter;
+ const month=$('#month').value;
+ const list=activities.map((a,i)=>({...a,i})).filter(a=>(month==='all'||a.month===Number(month))&&(filter==='Todas'||a.kind===filter));
+ $('#month-theme').textContent=month==='all'?'Dos primeiros encontros às pequenas combinações':monthThemes[month];
+ $('#activity-count').textContent=`${list.length} brincadeiras nesta seleção · ${activities.length} na coleção`;
+ $('#activities').innerHTML=list.map(a=>`<button class="activity-card" data-activity="${a.i}"><img class="activity-image" src="assets/illustrations/${a.image}.svg" alt="" width="160" height="120" loading="lazy"><span class="tag">${a.kind} · ${a.month} meses · com um adulto</span><h3>${a.title}</h3><p>${a.intro}</p><span class="card-bottom">Preparar a brincadeira ↗</span></button>`).join('')||'<p>Nenhuma atividade desta categoria neste mês. Escolha outra categoria ou veja todos os meses.</p>';
 }
+$('#month').onchange=()=>renderActivities();
+$('#print-month').onclick=()=>{const month=$('#month').value;const list=activities.filter(a=>month==='all'||a.month===Number(month));printPages(list.map(a=>page(`${a.month} meses · ${a.title}`,detail(a),true)).join(''));};
+
 function detail(a) { return `<h3>O que separar</h3><p>${a.materials}</p><h3>Como brincar</h3><ol>${a.steps.map(s=>`<li>${s}</li>`).join('')}</ol><h3>Cuidado e pausa</h3><p>${a.care}</p><p>Observe o interesse do bebê. Não há tempo mínimo, desafio ou resultado para cumprir.</p>`; }
 $('#activities').addEventListener('click',e=>{const button=e.target.closest('[data-activity]');if(!button)return;selectedActivity=activities[Number(button.dataset.activity)];$('#activity-title').textContent=selectedActivity.title;$('#activity-kind').textContent=selectedActivity.kind+' · brincadeira fora da tela';$('#activity-detail').innerHTML=detail(selectedActivity);$('#activity-dialog').showModal();});
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});renderActivities(b.dataset.filter);}));
@@ -28,15 +37,15 @@ function renderKeys(){const count={numbers:10,letters:26,shapes:4,colors:6}[curr
 $('#keys').onclick=e=>{const b=e.target.closest('[data-key]');if(b)selectCard(Number(b.dataset.key),true);};
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{stopAudio();currentTab=b.dataset.tab;document.querySelectorAll('[data-tab]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});renderKeys();});
 let speechTimer;
-function speak(){
- const status=$('#speech-status');
+function speak(text=currentCard.say,statusSelector='#speech-status'){
+ const status=$(statusSelector);
  if(!('speechSynthesis' in window)||!('SpeechSynthesisUtterance' in window)){status.textContent='Este navegador não oferece voz. Leia o exemplo em voz alta para a Mariah.';return;}
  stopAudio();clearTimeout(speechTimer);
- try{const u=new SpeechSynthesisUtterance(currentCard.say);u.lang='pt-BR';u.rate=.8;u.volume=.35;const v=window.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase()==='pt-br');if(v)u.voice=v;
+ try{const u=new SpeechSynthesisUtterance(text);u.lang='pt-BR';u.rate=.8;u.volume=.35;const v=window.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase()==='pt-br');if(v)u.voice=v;
  u.onstart=()=>{clearTimeout(speechTimer);status.textContent='Ouvindo um exemplo curto. Use volume baixo e mantenha o aparelho longe do bebê.';};u.onend=()=>{status.textContent='Agora é a sua vez: repita com a sua voz e guarde o aparelho.';};u.onerror=()=>{clearTimeout(speechTimer);status.textContent='A voz não ficou disponível. Você pode ler o cartão em voz alta.';};window.speechSynthesis.speak(u);speechTimer=setTimeout(()=>{status.textContent='Se não ouviu nada, leia o cartão em voz alta. A disponibilidade da voz depende do navegador.';},5000);
  }catch{status.textContent='Áudio indisponível neste navegador. A sua voz é suficiente.';}
 }
-$('#speak').onclick=speak;
+$('#speak').onclick=()=>speak();
 $('#sound').onchange=()=>{if(!$('#sound').checked)stopAudio();};
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAudio();});
 function page(title,body,guide=false){return `<section class="print-page${guide?' guide':''}"><p>MARIAH · PEQUENAS DESCOBERTAS</p><h1>${title}</h1>${body}<p>Preparado pelo adulto · brincar juntos, fora da tela.</p></section>`;}
