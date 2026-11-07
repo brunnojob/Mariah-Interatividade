@@ -25,6 +25,8 @@ Criado com afeto para a Mariah, aos 6 meses, este espaço ajuda **pais e cuidado
 | Ateliê de papel | Imprimir 20 desenhos vetoriais originais, um por folha A4, ou baixar SVGs individualmente. |
 | Explorar aqui | Bichinhos ilustrados, piano de cores, cucu, história de três páginas e pintura por toque com impressão. |
 | Trilha mensal | Selecionar cada mesversário de 6 a 12 meses e imprimir as propostas daquele mês. |
+| Cantigas | Seis músicas originais, melodias locais, versos interativos, volume e letras para cantar e imprimir. |
+| Calendário | Uma proposta distinta por dia do mês, com 31 ideias e adaptações de 6 a 12 meses; aniversário opcional calculado só na página. |
 | Fora da tela | Interromper o áudio, exibir a orientação escolhida e convidar o adulto a guardar o aparelho. |
 
 <details>
@@ -78,3 +80,9 @@ Abra `http://localhost:8000`. O áudio usa `SpeechSynthesis` do navegador, acion
 Para regenerar os desenhos e GIFs: `python3 scripts/generate_assets.py` (requer Pillow). Para validar a integridade: `python3 scripts/check.py` e `node --check docs/app.js`.
 
 Ilustrações e animações originais do projeto, sem reproduzir personagens ou logotipos do brinquedo usado como inspiração. Licença [MIT](LICENSE). Criado por [brunnojob](https://github.com/brunnojob).
+
+### Experiência para a família
+
+O Pages não exibe links para o repositório ou perfil. Fundo claro suave, cores dessaturadas, texto com contraste e controles adaptados a toque, celular e tablet. Não há alegação de proteção ocular. As seis cantigas têm letras e melodias originais; o áudio é instrumental gerado por Web Audio, sem faixas comerciais ou reprodução contínua.
+
+O calendário pode ser usado manualmente ou com aniversário opcional, que não é salvo ou transmitido. Apenas as marcações voluntárias de brincadeiras ficam no localStorage do navegador, sem pontuação, sequência diária ou diagnóstico. As 31 propostas são alternadas entre os meses e adaptadas à fase; repetir é esperado, sem promessa de evolução em calendário.
