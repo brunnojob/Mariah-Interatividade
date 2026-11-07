@@ -92,3 +92,5 @@ O calendário pode ser usado manualmente ou com aniversário opcional, que não 
 Seleção automática prioriza vozes conhecidas como femininas e opções naturais em português, com preferência brasileira. A lista acompanha `voiceschanged`; não seleciona a primeira voz sem avaliar o idioma. Ritmo inicial 0,96, tom original e volume ajustável. A família pode ouvir uma amostra e escolher outra voz disponível. Preferências ficam apenas no navegador.
 
 A qualidade e a disponibilidade dependem das vozes do aparelho; não há promessa de voz humana nem de voz neural em todos os navegadores. O módulo não chama endpoints externos de TTS. A própria voz do sistema pode depender de serviços do fabricante. O controle aplica-se às falas; o piano e as cantigas continuam instrumentais.
+
+Pronúncia: antes de sintetizar, todas as ocorrências de `Mariah` viram `Mariá` apenas no texto falado; a grafia exibida não muda. O plano em `scripts/voice-recording-plan.json` contém 58 textos preparados localmente para uma futura narração em arquivos; esses arquivos ainda não foram gerados.

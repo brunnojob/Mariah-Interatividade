@@ -1,0 +1,241 @@
+{
+  "status": "prepared-only-not-generated",
+  "provider": "Microsoft speech",
+  "voice": "pt-BR-FranciscaNeural",
+  "rate": "-3%",
+  "purpose": "Static female neural narration files for Pages, independent of installed system voices",
+  "clips": [
+    {
+      "id": "number-1",
+      "text": "Um"
+    },
+    {
+      "id": "number-2",
+      "text": "Dois"
+    },
+    {
+      "id": "number-3",
+      "text": "Três"
+    },
+    {
+      "id": "number-4",
+      "text": "Quatro"
+    },
+    {
+      "id": "number-5",
+      "text": "Cinco"
+    },
+    {
+      "id": "number-6",
+      "text": "Seis"
+    },
+    {
+      "id": "number-7",
+      "text": "Sete"
+    },
+    {
+      "id": "number-8",
+      "text": "Oito"
+    },
+    {
+      "id": "number-9",
+      "text": "Nove"
+    },
+    {
+      "id": "number-10",
+      "text": "Dez"
+    },
+    {
+      "id": "letter-A",
+      "text": "á. Abelha."
+    },
+    {
+      "id": "letter-B",
+      "text": "bê. Bola."
+    },
+    {
+      "id": "letter-C",
+      "text": "cê. Casa."
+    },
+    {
+      "id": "letter-D",
+      "text": "dê. Dado."
+    },
+    {
+      "id": "letter-E",
+      "text": "é. Estrela."
+    },
+    {
+      "id": "letter-F",
+      "text": "éfe. Flor."
+    },
+    {
+      "id": "letter-G",
+      "text": "gê. Gato."
+    },
+    {
+      "id": "letter-H",
+      "text": "agá. Hipopótamo."
+    },
+    {
+      "id": "letter-I",
+      "text": "i. Ilha."
+    },
+    {
+      "id": "letter-J",
+      "text": "jota. Janela."
+    },
+    {
+      "id": "letter-K",
+      "text": "cá. Kiwi."
+    },
+    {
+      "id": "letter-L",
+      "text": "éle. Lua."
+    },
+    {
+      "id": "letter-M",
+      "text": "ême. Maçã."
+    },
+    {
+      "id": "letter-N",
+      "text": "êne. Nuvem."
+    },
+    {
+      "id": "letter-O",
+      "text": "ó. Ovelha."
+    },
+    {
+      "id": "letter-P",
+      "text": "pê. Peixe."
+    },
+    {
+      "id": "letter-Q",
+      "text": "quê. Queijo."
+    },
+    {
+      "id": "letter-R",
+      "text": "érre. Rato."
+    },
+    {
+      "id": "letter-S",
+      "text": "ésse. Sol."
+    },
+    {
+      "id": "letter-T",
+      "text": "tê. Tartaruga."
+    },
+    {
+      "id": "letter-U",
+      "text": "u. Uva."
+    },
+    {
+      "id": "letter-V",
+      "text": "vê. Vaca."
+    },
+    {
+      "id": "letter-W",
+      "text": "dáblio. Waffle."
+    },
+    {
+      "id": "letter-X",
+      "text": "xis. Xícara."
+    },
+    {
+      "id": "letter-Y",
+      "text": "ípsilon. Yoga."
+    },
+    {
+      "id": "letter-Z",
+      "text": "zê. Zebra."
+    },
+    {
+      "id": "shape-0",
+      "text": "Círculo"
+    },
+    {
+      "id": "shape-1",
+      "text": "Quadrado"
+    },
+    {
+      "id": "shape-2",
+      "text": "Triângulo"
+    },
+    {
+      "id": "shape-3",
+      "text": "Retângulo"
+    },
+    {
+      "id": "color-0",
+      "text": "Amarelo"
+    },
+    {
+      "id": "color-1",
+      "text": "Azul"
+    },
+    {
+      "id": "color-2",
+      "text": "Vermelho"
+    },
+    {
+      "id": "color-3",
+      "text": "Verde"
+    },
+    {
+      "id": "color-4",
+      "text": "Laranja"
+    },
+    {
+      "id": "color-5",
+      "text": "Roxo"
+    },
+    {
+      "id": "animal-0",
+      "text": "Gato. Miau! Olá, Mariá!"
+    },
+    {
+      "id": "animal-1",
+      "text": "Cachorro. Au, au! Olá, Mariá!"
+    },
+    {
+      "id": "animal-2",
+      "text": "Vaca. Muuu! Olá, Mariá!"
+    },
+    {
+      "id": "animal-3",
+      "text": "Pato. Quá, quá! Olá, Mariá!"
+    },
+    {
+      "id": "animal-4",
+      "text": "Ovelha. Bééé! Olá, Mariá!"
+    },
+    {
+      "id": "animal-5",
+      "text": "Pintinho. Piu, piu! Olá, Mariá!"
+    },
+    {
+      "id": "peek-open",
+      "text": "Achou! O ursinho apareceu."
+    },
+    {
+      "id": "peek-close",
+      "text": "Cadê o ursinho?"
+    },
+    {
+      "id": "story-0",
+      "text": "Um barquinho azul passeava bem devagar. A Mariá e seu tio olhavam a água. “Olha o barco!”, disse o tio."
+    },
+    {
+      "id": "story-1",
+      "text": "Perto do barco apareceu um peixinho. Ele passou de um lado para o outro. “Olá, peixinho!”, disseram juntos."
+    },
+    {
+      "id": "story-2",
+      "text": "O sol apareceu e o barquinho parou. Era hora de um abraço, de descansar e de descobrir o mundo juntinhos."
+    },
+    {
+      "id": "preview",
+      "text": "Oi, Mariá! Vamos descobrir as cores? Olha a bola azul! Agora é a sua vez."
+    }
+  ]
+}
