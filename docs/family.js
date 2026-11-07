@@ -11,7 +11,7 @@ function renderSong(){stopMusic('Escolha a melodia ou um verso. Você canta; a M
 $('#song-list').innerHTML=familySongs.map((song,i)=>`<button data-song="${i}" aria-pressed="false">${illustration(song.image,'')}<span>${song.title}</span></button>`).join('');
 $('#song-list').onclick=e=>{const b=e.target.closest('[data-song]');if(b){songIndex=Number(b.dataset.song);renderSong();}};
 async function playSong(single=false){
- stopMusic();stopPlaySounds();const run=musicRun;const song=familySongs[songIndex];
+ stopMusic();stopPlaySounds();$('#music-status').textContent='Preparando a melodia…';const run=musicRun;const song=familySongs[songIndex];
  const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio){$('#music-status').textContent='A melodia não está disponível neste navegador. A letra está aqui para você cantar.';return;}
  try{
  musicContext??=new Audio();if(musicContext.state==='suspended')await musicContext.resume();if(run!==musicRun)return;
